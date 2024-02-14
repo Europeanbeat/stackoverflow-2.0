@@ -25,8 +25,10 @@ hs_err_pid*
 *.iml
 target/
 .idea/
-/node_modules
 /mvnw
 /mvnw.cmd
 /src/main/resources/stackoverflow.db
 /src/main/resources/stackoverflow.db-journal
+.env
+/frontend/node_modules/
+/backend/out/

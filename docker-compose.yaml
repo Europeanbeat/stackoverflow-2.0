@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  backend:
+    image: europeanbeat/stackoverflow:myspringbootapp
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+  frontend:
+    image: europeanbeat/stackoverflow:myreactapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+volumes:
+  dbdata:
