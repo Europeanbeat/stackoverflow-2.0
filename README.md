@@ -61,7 +61,7 @@ Similarly Answers Schema  contains five columns:
 
 1. Clone this repository to your local machine.
    ```sh
-   git clone https://github.com/github_username/stackoverflow.git
+   git clone https://github.com/github_username/stackoverflow-2.0.git
    ```
 
 2. Set up environment variables for PostgreSQL connection. Create an `.env` file in the same directory as your `docker-compose.yml` file with the following content:
