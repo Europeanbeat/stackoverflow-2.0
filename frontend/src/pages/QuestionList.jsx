@@ -37,6 +37,8 @@ export const QuestionList = () => {
         return <div/>;
     }
     return (
-        <QuestionTable questions={questions} onDelete={handleDelete}/>
+        questions && questions.length > 0 ?
+            <QuestionTable questions={questions} onDelete={handleDelete}/> :
+            <div>No questions</div>
     )
 }
